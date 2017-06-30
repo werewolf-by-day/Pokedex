@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Pokedex</title>
+    <link rel="stylesheet" type="text/css" href="pokedex.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+  var html_string="";
+  for(var i = 1; i <= 151; i++) {
+      html_string += '<img id=' + " [i] " + 'src="http://pokeapi.co/media/img/' + [i] + '.png" alt="">'
+    };
+
+      $(document).ready(function() {
+        $("#container").append(html_string);
+      });
+
+      $("img").click(function() {
+        $.get("http://pokeapi.co/api/v1/pokemon/1/", function(res) {
+          var dex_entry = "";
+          dex_entry += "<h4>Title</h4>";
+                    dex_entry += "<ul>";
+                    for(var x = 0; x < res.types.length; x++) {
+                        dex_entry += "<li>" + res.types[x].name + "</li>";
+                    }
+                    dex_entry += "</ul>";
+                    console.log(res);
+                    $("#pokedex").html(dex_entry);
+                }, "json");
+
+      });
+    </script>
+  </head>
+  <body>
+    <!-- <div id="wrapper">  -->
+      <div id="container">
+      </div>
+      <div id="pokedex">
+      </div>
+<!--  </div>  -->
+  </body>
+</html>
