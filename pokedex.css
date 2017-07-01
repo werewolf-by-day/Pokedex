@@ -19,7 +19,7 @@
 #pokedex {
   width: 160px;
   height: 400px;
-  padding-left: 40px;
+  padding-left: 20px;
   border-width: 20px 20px 40px 20px;
   border-style:solid;
   border-color: red;
@@ -28,7 +28,9 @@
   position: fixed;
 }
 
-h4 {
+h1 {
+  font-weight: bold;
+  align-self: center;
 
 }
 
@@ -37,5 +39,10 @@ ul {
 }
 
 li {
+  margin: 10px 0px 10px 30px;
 
+}
+
+p {
+  margin: 5px 0px 0px 5px;
 }
