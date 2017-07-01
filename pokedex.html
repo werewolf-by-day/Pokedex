@@ -10,17 +10,21 @@
   var html_string="";
   for(var i = 1; i <= 151; i++) {
       html_string += '<img id="' +  [i]  + '" src="http://pokeapi.co/media/img/' + [i] + '.png" alt="">'
+      $("#" + i + "").data("number", i)
     };
+
 
       $(document).ready(function() {
         $("#container").append(html_string);
       });
 
+
       $(document).on("click", "img", (function() {
-        $.get("http://pokeapi.co/api/v1/pokemon/1", function(res) {
+        var unique = $(this).data("number");
+        $.get("http://pokeapi.co/api/v1/pokemon/" + unique + "/", function(res) {
           var dex_entry = "";
           dex_entry += "<h1>" + res.name + "</h1>";
-          dex_entry += '<img src="http://pokeapi.co/media/img/1.png">';
+          dex_entry += "<img src='http://pokeapi.co/media/img/" + unique + ".png'>";
           dex_entry += "<h3>Types</h3>"
                     dex_entry += "<ul>";
                     for(var x = 0; x < res.types.length; x++) {
@@ -32,7 +36,7 @@
           dex_entry += "<h3>Weight</h3>"
           dex_entry += "<p>" + res.weight + "</p>"
 
-                    console.log(res);
+                    console.log(dex_entry);
                     $("#pokedex").html(dex_entry);
                 }, "json");
             }));
