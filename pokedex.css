@@ -1,12 +1,12 @@
 * {
   margin:0px;
   padding:0px;
+  font-family: "arial";
 }
 
-/*#wrapper {
-  margin: 0px;
-  padding: 0px;
-}*/
+p {
+  font-family: "courier new";
+}
 
 #container {
   width: 800px;
@@ -17,9 +17,9 @@
 }
 
 #pokedex {
-  width: 175px;
+  width: 180px;
   height: 400px;
-  padding-left: 20px;
+  padding-left: 10px;
   border-width: 20px 20px 40px 20px;
   border-style:solid;
   border-color: red;
@@ -29,9 +29,15 @@
 }
 
 h1 {
-  font-weight: bold;
-  align-self: center;
+  font-weight: lighter;
+  font-size: 28px;
+  font-family: "century gothic";
+}
 
+h3 {
+  font-size: 22px;
+  font-weight: lighter;
+  font-family: "galdugi";
 }
 
 ul {
@@ -39,7 +45,8 @@ ul {
 }
 
 li {
-  margin: 10px 0px 10px 30px;
+  margin: 10px 0px 10px 25px;
+  font-family: "arial";
 
 }
 
