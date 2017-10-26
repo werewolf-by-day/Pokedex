@@ -6,10 +6,11 @@
 
 p {
   font-family: "courier new";
+  margin: 5px 0px 0px 5px;
 }
 
 #container {
-  width: 800px;
+  width: 780px;
   margin: 0px;
   padding: 0px;
   display: inline-block;
@@ -17,8 +18,8 @@ p {
 }
 
 #pokedex {
-  width: 180px;
-  height: 400px;
+  width: 220px;
+  height: 460px;
   padding-left: 10px;
   border-width: 20px 20px 40px 20px;
   border-style:solid;
@@ -26,6 +27,11 @@ p {
   display: inline-block;
   vertical-align: top;
   position: fixed;
+}
+
+#dex_num{
+  margin-right: 5px;
+  position:absolute;top:0;right:0;
 }
 
 h1 {
@@ -41,15 +47,105 @@ h3 {
 }
 
 ul {
-
+  list-style-type: none;
 }
 
 li {
-  margin: 10px 0px 10px 25px;
-  font-family: "arial";
+  margin: 10px 85px 10px 15px;
+  padding: 0px 30px 0px 30px;
+  font-family: "century gothic";
+  font-weight: lighter;
+  color: white;
+  background-color: blue;
+  border-radius: 25px;
+} 
 
+.bug {
+  border: 2px solid rgb(109,120,21);
+  background-color: rgb(168,184,32);
 }
 
-p {
-  margin: 5px 0px 0px 5px;
+.dark {
+  border: 2px solid rgb(73,57,47);
+  background-color: rgb(112,88,72);
+}
+
+.dragon {
+  border: 2px solid rgb(73,36,161);
+  background-color: rgb(112,56,248);
+}
+
+.electric {
+  border: 2px solid rgb(161,135,31);
+  background-color: rgb(248,208,48);
+}
+
+.fairy {
+  border: 2px solid rgb(155,100,112);
+  background-color: rgb(238,153,172);
+}
+
+.fighting {
+  border: 2px solid rgb(214,120,115);
+  background-color: rgb(192,48,40);
+}
+
+.fire {
+  border: 2px solid rgb(156,83,31);
+  background-color: rgb(240,128,48);
+}
+
+.flying {
+  border: 2px solid rgb(200,192,248);
+  background-color: rgb(168,144,240);
+}
+
+.ghost {
+  border: 2px solid rgb(73,57,99);
+  background-color: rgb(112,88,152);
+}
+
+.grass {
+  border: 2px solid rgb(78,130,52);
+  background-color: rgb(120,200,80);
+}
+
+.ground {
+  border: 2px solid rgb(146,125,68);
+  background-color: rgb(224,192,104);
+}
+
+.ice {
+  border: 2px solid rgb(99,141,141);
+  background-color: rgb(152,216,216);
+}
+
+.normal {
+  border: 2px solid rgb(109,109,78);
+  background-color: rgb(168,168,120);
+}
+
+.poison {
+  border: 2px solid rgb(104,42,104);
+  background-color: rgb(160,64,160);
+}
+
+.psychic {
+  border: 2px solid rgb(161,57,89);
+  background-color: rgb(248,88,136);
+}
+
+.rock {
+  border: 2px solid rgb(120,104,36);
+  background-color: rgb(184,160,56);
+}
+
+.steel {
+  border: 2px solid rgb(120,120,135);
+  background-color: rgb(184,184,208);
+}
+
+.water {
+  border: 2px solid rgb(68,94,156);
+  background-color: rgb(104,144,240);
 }

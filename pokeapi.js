@@ -12,8 +12,6 @@ $(document).on();
 $(document).on("click", "img", (function() {
     var dexId = $(this).attr("id");
     var url = "https://pokeapi.co/api/v2/pokemon/" + dexId
-    // var unique = $(this).data("number");
-    // $(this, "id").data("number", y);
   $.get(url, function(res) {
     var dex_entry = "";
     var mon_name = ((res.name).charAt(0).toUpperCase() + (res.name).slice(1) )
@@ -24,7 +22,7 @@ $(document).on("click", "img", (function() {
     dex_entry += "<h3>Types</h3>"
     dex_entry += "<ul>";
     for(var x = 0; x < res.types.length; x++) {
-      dex_entry += "<li>" + res.types[x].type.name + "</li>";
+      dex_entry += "<li class=" + res.types[x].type.name + ">" + res.types[x].type.name + "</li>";
     }
 
     dex_entry += "</ul>";
@@ -32,6 +30,7 @@ $(document).on("click", "img", (function() {
     dex_entry += "<p>" + (res.height * .1).toFixed(2) + " m</p>"
     dex_entry += "<h3>Weight</h3>"
     dex_entry += "<p>" + (res.weight * .1).toFixed(2) + " kg</p>"
+    dex_entry += "<p id='dex_num'> #" + res.id + "</p>"
 
     $("#pokedex").html(dex_entry);
   }, "json");
