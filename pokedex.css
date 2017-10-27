@@ -29,22 +29,9 @@ label {
 
 #pokedex {
   width: 220px;
-  height: 520px;
+  height: 600px;
   padding-left: 10px;
   border-width: 20px 20px 40px 20px;
-  border-style:solid;
-  border-color: red;
-  display: inline-block;
-  vertical-align: top;
-  position: fixed;
-}
-
-#data {
-  width: 250px;
-  height: 120px;
-  margin-top: 590px;
-  padding: 10px, 0px, 0px, 10px;
-  border-width: 10px 10px 20px 10px;
   border-style:solid;
   border-color: red;
   display: inline-block;
@@ -60,6 +47,13 @@ label {
 h1 {
   font-weight: lighter;
   font-size: 28px;
+  font-family: "century gothic";
+}
+
+h2 {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: lighter;
   font-family: "century gothic";
 }
 
@@ -104,6 +98,72 @@ li {
   border: 1px solid rgb(0,162,232);
   font-size: 70%;
   opacity: 0.05;
+}
+
+.speed {
+  margin: 0px 50px 5px 0px;
+  padding: 0px 0px 0px 5px;
+  font-weight: lighter;
+  background-color: rgb(112,146,190);
+  border-radius: 5px;
+  border: 1px solid rgb(0,162,232);
+  color: white;
+  font-size: 40%;
+}
+
+.special-defense {
+  margin: 0px 50px 5px 0px;
+  padding: 0px 0px 0px 5px;
+  font-weight: lighter;
+  background-color: rgb(112,146,190);
+  border-radius: 5px;
+  border: 1px solid rgb(0,162,232);
+  color: white;
+  font-size: 40%;
+}
+
+.special-attack {
+  margin: 0px 50px 5px 0px;
+  padding: 0px 0px 0px 5px;
+  font-weight: lighter;
+  background-color: rgb(112,146,190);
+  border-radius: 5px;
+  border: 1px solid rgb(0,162,232);
+  color: white;
+  font-size: 40%;
+}
+
+.defense {
+  margin: 0px 50px 5px 0px;
+  padding: 0px 0px 0px 5px;
+  font-weight: lighter;
+  background-color: rgb(112,146,190);
+  border-radius: 5px;
+  border: 1px solid rgb(0,162,232);
+  color: white;
+  font-size: 40%;
+}
+
+.attack {
+  margin: 0px 50px 5px 0px;
+  padding: 0px 0px 0px 5px;
+  font-weight: lighter;
+  background-color: rgb(112,146,190);
+  border-radius: 5px;
+  border: 1px solid rgb(0,162,232);
+  color: white;
+  font-size: 40%;
+}
+
+.hp {
+  margin: 0px 50px 5px 0px;
+  padding: 0px 0px 0px 5px;
+  font-weight: lighter;
+  background-color: rgb(112,146,190);
+  border-radius: 5px;
+  border: 1px solid rgb(0,162,232);
+  color: white;
+  font-size: 40%;
 }
 
 .bug {
