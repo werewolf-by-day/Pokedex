@@ -12,6 +12,7 @@ $(document).on();
 $(document).on("click", "img", (function() {
     var dexId = $(this).attr("id");
     var url = "https://pokeapi.co/api/v2/pokemon/" + dexId
+
   $.get(url, function(res) {
     var dex_entry = "";
     var mon_name = ((res.name).charAt(0).toUpperCase() + (res.name).slice(1) )
@@ -25,6 +26,17 @@ $(document).on("click", "img", (function() {
       dex_entry += "<li class=" + res.types[x].type.name + ">" + res.types[x].type.name + "</li>";
     }
 
+    dex_entry += "<h3>Abilities</<h3>"
+    dex_entry += "<ul>";
+    for(var y = 0; y < res.abilities.length; y++) {
+      if(res.abilities[y].is_hidden === true){
+        dex_entry += "<a href='#' title='This is a hidden ability'> <li class='hidden'>" + res.abilities[y].ability.name + "</li> </a>";
+      } else {
+      dex_entry += "<li class='abilities'>" + res.abilities[y].ability.name + "</li>";
+      // dex_entry += "<p>" + res.abilities[y].ability.url.effect_entries + "<p>";
+      }
+    }
+
     dex_entry += "</ul>";
     dex_entry += "<h3>Height</h3>"
     dex_entry += "<p>" + (res.height * .1).toFixed(2) + " m</p>"
@@ -32,6 +44,14 @@ $(document).on("click", "img", (function() {
     dex_entry += "<p>" + (res.weight * .1).toFixed(2) + " kg</p>"
     dex_entry += "<p id='dex_num'> #" + res.id + "</p>"
 
+
     $("#pokedex").html(dex_entry);
+
+    $(".hidden").hover(function() {
+      $(this).css('opacity', '1');
+    }, function() {
+      $(this).css('opacity', '0.05');
+    });
+
   }, "json");
 }));
