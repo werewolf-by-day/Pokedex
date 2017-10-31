@@ -47,7 +47,7 @@ $(document).on("click", "img", (function() {
     dex_entry += "<h2>Stats</<h2>";
     dex_entry += "<ul>";
     for(var z = 0; z < res.stats.length; z++) {
-      dex_entry += "<li class=" + res.stats[z].stat.name + "> <style='width:" + res.stats[z].base_stat + "; background-color: red;'>" + res.stats[z].stat.name + ": " + res.stats[z].base_stat + "</style> </li>";
+      dex_entry += "<li class='stats'> <span style='display: inline-block; width:" + res.stats[z].base_stat + "px; background: linear-gradient(to right, rgb(112,146,190), rgb(162,196,240));'>" + res.stats[z].stat.name + ":" + res.stats[z].base_stat + "</span> </li>";
     }
 
 

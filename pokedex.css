@@ -29,7 +29,7 @@ label {
 
 #pokedex {
   width: 220px;
-  height: 600px;
+  height: 640px;
   padding-left: 10px;
   border-width: 20px 20px 40px 20px;
   border-style:solid;
@@ -100,7 +100,7 @@ li {
   opacity: 0.05;
 }
 
-.speed {
+.stats {
   margin: 0px 50px 5px 0px;
   padding: 0px 0px 0px 5px;
   font-weight: lighter;
@@ -109,9 +109,11 @@ li {
   border: 1px solid rgb(0,162,232);
   color: white;
   font-size: 40%;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-.special-defense {
+/*.special-defense {
   margin: 0px 50px 5px 0px;
   padding: 0px 0px 0px 5px;
   font-weight: lighter;
@@ -164,7 +166,7 @@ li {
   border: 1px solid rgb(0,162,232);
   color: white;
   font-size: 40%;
-}
+}*/
 
 .bug {
   border: 2px solid rgb(109,120,21);
