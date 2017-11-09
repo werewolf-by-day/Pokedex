@@ -27,13 +27,16 @@ $(document).on("click", "img", (function() {
     }
 
     dex_entry += "<h3>Abilities</<h3>";
-    dex_entry += "<ul>";
+    dex_entry += "<ul class='ability'>";
     for(var y = 0; y < res.abilities.length; y++) {
+      var abilityUrl = res.abilities[y].ability.url;
+      var abilityId = abilityUrl.replace(/[^\d]/g, "");
+      var abilityId = abilityId.substr(1);
+
       if(res.abilities[y].is_hidden === true){
-        dex_entry += "<a href='#' title='This is a hidden ability'> <li class='hidden'>" + res.abilities[y].ability.name + "</li> </a>";
+        dex_entry += "<div style='opacity: 0.1;'> <a href='#' title='This is a hidden ability'> <li class='" + abilityId + "'>" + res.abilities[y].ability.name + "</li> </a> </div>";
       } else {
-      dex_entry += "<li class='abilities'>" + res.abilities[y].ability.name + "</li>";
-      // dex_entry += "<p>" + res.abilities[y].ability.url.effect_entries + "<p>";
+      dex_entry += "<li class='" + abilityId + "'>" + res.abilities[y].ability.name + "</li>";
       }
     }
 
@@ -47,16 +50,26 @@ $(document).on("click", "img", (function() {
     dex_entry += "<h2>Stats</<h2>";
     dex_entry += "<ul>";
     for(var z = 0; z < res.stats.length; z++) {
-      dex_entry += "<li class='stats'> <span style='display: inline-block; width:" + res.stats[z].base_stat + "px; background: linear-gradient(to right, rgb(112,146,190), rgb(162,196,240));'>" + res.stats[z].stat.name + ":" + res.stats[z].base_stat + "</span> </li>";
+      dex_entry += "<li class='stats'> <span style='display: inline-block; width:" + res.stats[z].base_stat + "px; background: linear-gradient(to right, rgb(112,146,190), rgb(162,196,240));'>" + res.stats[z].stat.name + ": " + res.stats[z].base_stat + "</span> </li>";
     }
+
 
 
     $("#pokedex").html(dex_entry);
 
-    $(".hidden").hover(function() {
-      $(this).css('opacity', '1');
+    $(".ability div").hover(function() {
+      $(this).css('opacity', '1.0');
     }, function() {
-      $(this).css('opacity', '0.05');
+      $(this).css('opacity', '0.1');
+    });
+
+    $("li").click(function() {
+      var abilityId = $(this).attr("class");
+      var url2 = "https://pokeapi.co/api/v2/ability/" + abilityId;
+      $.get(url2, function(res) {
+        alert(res.effect_entries[0].short_effect);
+        console.log(res.effect_entries[0].effect);
+      });
     });
 
   }, "json");
