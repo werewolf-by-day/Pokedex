@@ -38,15 +38,15 @@ $(document).on("click", "img", (function() {
       dex_entry += "<li class='" + abilityId + "'>" + res.abilities[y].ability.name + "</li>";
       }
     }
-
+//adds dex id number, adds and recalculates height and weight to meters and kilograms respectively
     dex_entry += "</ul>";
     dex_entry += "<h3>Height</h3>";
     dex_entry += "<p>" + (res.height * .1).toFixed(2) + " m</p>";
     dex_entry += "<h3>Weight</h3>";
     dex_entry += "<p>" + (res.weight * .1).toFixed(2) + " kg</p>";
     dex_entry += "<p id='dex_num'> #" + res.id + "</p>";
-    dex_entry += "<h2>Stats</<h2>";
-//stat bar functionality    
+//stat bar functionality       
+    dex_entry += "<h2>Stats</<h2>"; 
     dex_entry += "<ul>";
     for(var z = 0; z < res.stats.length; z++) {
       dex_entry += "<li class='stats'> <span style='display: inline-block; width:" + res.stats[z].base_stat + "px; background: linear-gradient(to right, rgb(112,146,190), rgb(162,196,240));'>" + res.stats[z].stat.name + ": " + res.stats[z].base_stat + "</span> </li>";
@@ -71,6 +71,6 @@ $(document).on("click", "img", (function() {
         console.log(res.effect_entries[0].effect);
       });
     });
-
+    
   }, "json");
 }));
