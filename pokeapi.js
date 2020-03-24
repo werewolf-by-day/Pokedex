@@ -1,7 +1,7 @@
 //gets all pokemon images and assigns unique Id
 var html_string="";
-      for(var i = 1; i <= 718; i++) {
-        html_string += '<img id="' +  [i]  + '" src="http://pokeapi.co/media/img/' + [i] + '.png" alt="">';
+      for(var i = 1; i <= 807; i++) {
+        html_string += '<img id="' +  [i]  + '" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + [i] + '.png" alt="">';
       }
 //adds all images
 $(document).ready(function() {
