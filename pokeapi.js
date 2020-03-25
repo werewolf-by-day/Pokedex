@@ -69,7 +69,7 @@ $(document).on("click", "img", (function() {
       $.get(url2, function(res) {
         alert(res.effect_entries[0].short_effect);
         console.log(res.effect_entries[0].effect);
-      });
+      }); return false;
     });
     
   }, "json");
