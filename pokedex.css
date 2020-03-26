@@ -1,11 +1,13 @@
 * {
   margin:0px;
   padding:0px;
+  /*border:5px;*/
   font-family: "arial";
 }
 
 body {
-  background-image: linear-gradient(to right, rgb(238, 230, 255),  rgb(245, 240, 255), rgb(255, 255, 255));
+  background-image: linear-gradient(to right, rgb(238, 230, 255),  
+  rgb(218, 215, 250), rgb(255, 255, 255));
 }
 
 p {
@@ -34,20 +36,125 @@ label {
 #pokedex {
   width: 220px;
   height: 680px;
+  margin-top: 5px;
   padding-left: 10px;
   padding-top: 12px;
-  border-width: 20px 20px 40px 20px;
+  border-width: 40px 20px 40px 20px;
   border-style:solid;
   border-color: red;
+  outline-style: ridge;
+  outline-color: rgb(64, 64, 64);
+  outline-width: 5px;
   display: inline-block;
   vertical-align: top;
   position: fixed;
   background-color: white;
 }
 
+#dexlights {
+  margin-left: 50px;
+  display: inline-block;
+  vertical-align: top;
+  position: fixed;
+}
+
+#red {
+  margin: 8px 0px 0px 4px; /*this circle is slightly higher due to the shadow making it */
+  display: inline-block;
+  vertical-align: top;
+  position: fixed;
+  background: rgb(220, 0, 0);
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  box-shadow: 1px -1px  rgb(110, 0, 0);
+}
+
+#yellow {
+  margin: 8px 0px 0px 26px;
+  display: inline-block;
+  vertical-align: top;
+  position: fixed;
+  background: rgb(255, 255, 04);
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  box-shadow: 1px -1px  rgb(126, 126, 0);
+}
+
+#green {
+  margin: 8px 0px 0px 48px;
+  display: inline-block;
+  vertical-align: top;
+  position: fixed;
+  background: rgb(0, 204, 0);
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  box-shadow: 1px -1px  rgb(0, 102, 0);
+}
+
+#dexdetails {
+  margin: 10px 0px 0px 8px;
+  display: inline-block;
+  vertical-align: top;
+  position: fixed;
+  background: rgb(220, 220, 220);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+#dexextradetails {
+  margin: 12px 0px 0px 10px;
+  display: inline-block;
+  vertical-align: top;
+  position: fixed;
+  background: rgb(0, 82, 204);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+
+#dextinydeets {
+  margin: 15px 0px 0px 13px;
+  display: inline-block;
+  vertical-align: top;
+  position: fixed;
+  background: rgb(26, 117, 255);
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+}
+
+#dexcameraglare {
+  margin: 15px 0px 0px 13px;
+  display: inline-block;
+  vertical-align: top;
+  position: fixed;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+}
+
+#dexside {
+  margin: 360px 0px 0px 2px;
+  display: inline-block;
+  vertical-align: left;
+  position: fixed;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-left: 15px solid rgb(255, 255, 0);
+  border-bottom: 20px solid transparent;
+}
+
 #dex_num{
   margin-right: 5px;
   position:absolute;top:0;right:0;
+  font-weight: bold;
+  font-family: "prestige";
 }
 
 h1 {
@@ -142,7 +249,7 @@ li {
 }
 
 .flying {
-  border: 2px solid rgb(200,192,248);
+  border: 2px solid rgb(220,192,248);
   background-color: rgb(168,144,240);
 }
 
@@ -153,7 +260,7 @@ li {
 
 .grass {
   border: 2px solid rgb(78,130,52);
-  background-color: rgb(120,200,80);
+  background-color: rgb(120,220,80);
 }
 
 .ground {
@@ -177,7 +284,7 @@ li {
 }
 
 .psychic {
-  border: 2px solid rgb(161,57,89);
+  border: 2px solid rgb(161,57,64);
   background-color: rgb(248,88,136);
 }
 
