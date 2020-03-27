@@ -42,7 +42,7 @@ label {
   border-width: 40px 20px 40px 20px;
   border-style:solid;
   border-color: red;
-  outline-style: ridge;
+  outline-style: outset;
   outline-color: rgb(64, 64, 64);
   outline-width: 5px;
   display: inline-block;
@@ -59,7 +59,7 @@ label {
 }
 
 #red {
-  margin: 8px 0px 0px 4px; /*this circle is slightly higher due to the shadow making it */
+  margin: 8px 0px 0px 4px;
   display: inline-block;
   vertical-align: top;
   position: fixed;
