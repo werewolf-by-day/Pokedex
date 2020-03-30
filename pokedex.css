@@ -59,7 +59,7 @@ label {
 }
 
 #red {
-  margin: 8px 0px 0px 4px;
+  margin: 11px 0px 0px 4px;
   display: inline-block;
   vertical-align: top;
   position: fixed;
@@ -67,11 +67,11 @@ label {
   border-radius: 50%;
   width: 12px;
   height: 12px;
-  box-shadow: 1px -1px  rgb(110, 0, 0);
+  box-shadow: 1px -1px rgb(110, 0, 0);
 }
 
 #yellow {
-  margin: 8px 0px 0px 26px;
+  margin: 11px 0px 0px 26px;
   display: inline-block;
   vertical-align: top;
   position: fixed;
@@ -79,11 +79,11 @@ label {
   border-radius: 50%;
   width: 12px;
   height: 12px;
-  box-shadow: 1px -1px  rgb(126, 126, 0);
+  box-shadow: 1px -1px rgb(126, 126, 0);
 }
 
 #green {
-  margin: 8px 0px 0px 48px;
+  margin: 11px 0px 0px 48px;
   display: inline-block;
   vertical-align: top;
   position: fixed;
@@ -91,7 +91,7 @@ label {
   border-radius: 50%;
   width: 12px;
   height: 12px;
-  box-shadow: 1px -1px  rgb(0, 102, 0);
+  box-shadow: 1px -1px rgb(0, 102, 0);
 }
 
 #dexdetails {
