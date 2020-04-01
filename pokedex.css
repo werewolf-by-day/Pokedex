@@ -161,6 +161,8 @@ h1 {
   font-weight: lighter;
   font-size: 28px;
   font-family: "century gothic";
+  border-bottom: solid 1px;
+  margin-right: 10px;
 }
 
 h2 {
