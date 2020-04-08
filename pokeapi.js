@@ -3,8 +3,10 @@ var html_string="";
       for(var i = 1; i <= 807; i++) {
         html_string += '<img id="' +  [i]  + '" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + [i] + '.png" alt="">';
       }
+
 //adds all images
 $(document).ready(function() {
+  html_string += '<img id="10126" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/745-midnight.png" alt="">';
   $("#container").append(html_string);
 });
 
