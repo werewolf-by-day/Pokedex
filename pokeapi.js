@@ -8,6 +8,9 @@ var html_string="";
 $(document).ready(function() {
 //this bit here is to add the additonal forms of certain Pokemon, but ID is arbitrary in API, so it doesn't coincide with dexId - will have to find workaround  
   html_string += '<img id="10126" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/745-midnight.png" alt="">';
+  for(var i = 10001; i <= 10090; i++) {
+        html_string += '<img id="' +  [i]  + '" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + [i] + '.png" alt="">';
+      }  
   $("#container").append(html_string);
 });
 
