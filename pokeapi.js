@@ -6,6 +6,7 @@ var html_string="";
 
 //adds all images
 $(document).ready(function() {
+  html_string += '<h1>Alternate Forms</h1>';
 //this bit here is to add the additonal forms of certain Pokemon, but ID is arbitrary in API, so it doesn't coincide with dexId - will have to find workaround  
   html_string += '<img id="10126" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/745-midnight.png" alt="">';
   for(var i = 10001; i <= 10090; i++) {
@@ -50,6 +51,7 @@ $(document).on("click", "img", (function() {
     dex_entry += "<p>" + (res.height * .1).toFixed(2) + " m</p>";
     dex_entry += "<h3>Weight</h3>";
     dex_entry += "<p>" + (res.weight * .1).toFixed(2) + " kg</p>";
+//var created to accommodate different id for alternate forms    
     var speciesNumber = (res.species.url).slice(42);
     var realDexId = speciesNumber.replace("/", "");
     dex_entry += "<p id='dex_num'> #" + realDexId + "</p>";
