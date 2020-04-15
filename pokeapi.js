@@ -50,7 +50,9 @@ $(document).on("click", "img", (function() {
     dex_entry += "<p>" + (res.height * .1).toFixed(2) + " m</p>";
     dex_entry += "<h3>Weight</h3>";
     dex_entry += "<p>" + (res.weight * .1).toFixed(2) + " kg</p>";
-    dex_entry += "<p id='dex_num'> #" + res.id + "</p>";
+    var speciesNumber = (res.species.url).slice(42);
+    var realDexId = speciesNumber.replace("/", "");
+    dex_entry += "<p id='dex_num'> #" + realDexId + "</p>";
 //stat bar functionality       
     dex_entry += "<h2>Stats</<h2>"; 
     dex_entry += "<ul>";
