@@ -78,8 +78,8 @@ $(document).on("click", "img", (function() {
       var abilityId = $(this).attr("class");
       var url2 = "https://pokeapi.co/api/v2/ability/" + abilityId;
       $.get(url2, function(res) {
-        alert(res.effect_entries[0].short_effect);
-        console.log(res.effect_entries[0].effect);
+        alert(res.effect_entries[1].short_effect);
+        console.log(res.effect_entries[1].effect);
       }); return false;
     });
     
