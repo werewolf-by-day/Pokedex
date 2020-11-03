@@ -78,10 +78,18 @@ $(document).on("click", "img", (function() {
       var abilityId = $(this).attr("class");
       var url2 = "https://pokeapi.co/api/v2/ability/" + abilityId;
       $.get(url2, function(res) {
-        alert(res.effect_entries[1].short_effect);
-        console.log(res.effect_entries[1].effect);
+        if(abilityId > 191 || abilityId == 65 || abilityId == 64) {
+          alert(res.effect_entries[0].short_effect);
+          console.log(res.effect_entries[0].effect);
+          console.log(abilityId);
+        } else {
+          alert(res.effect_entries[1].short_effect);
+          console.log(res.effect_entries[1].effect);
+          console.log(abilityId);
+        }
       }); return false;
-    });
-    
+    });    
+
   }, "json");
+
 }));
