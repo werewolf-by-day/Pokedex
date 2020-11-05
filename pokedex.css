@@ -178,6 +178,13 @@ h3 {
   font-family: "galdugi";
 }
 
+h6 {
+  font-size: 18px;
+  font-weight: lighter;
+  font-family: "american typewriter";
+  color: grey;
+}
+
 ul {
   list-style-type: none;
 }

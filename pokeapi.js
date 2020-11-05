@@ -1,6 +1,7 @@
 //gets all pokemon images and assigns unique Id
+//updated function to include gen VIII - no abilities listed for newer mons, info completely unavailable for newest - listing up to Zarude
 var html_string="";
-      for(var i = 1; i <= 807; i++) {
+      for(var i = 1; i <= 893; i++) {
         html_string += '<img id="' +  [i]  + '" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + [i] + '.png" alt="">';
       }
 
@@ -35,6 +36,10 @@ $(document).on("click", "img", (function() {
 //lists abilities and assigns var for next step
     dex_entry += "<h3>Abilities</<h3>";
     dex_entry += "<ul class='ability'>";
+//note for newer mons not displaying abilites
+    if(res.abilities.length < 1){
+      dex_entry += "<h6>**more info coming soon**</h6>";
+    }      
     for(var y = 0; y < res.abilities.length; y++) {
       var abilityUrl = res.abilities[y].ability.url;
       var abilityId = abilityUrl.replace(/[^\d]/g, "");
@@ -45,6 +50,7 @@ $(document).on("click", "img", (function() {
       } else {
       dex_entry += "<li class='" + abilityId + "'>" + res.abilities[y].ability.name + "</li>";
       }
+
     }
 //adds dex id number, adds and recalculates height and weight to meters and kilograms respectively
     dex_entry += "</ul>";
@@ -78,12 +84,14 @@ $(document).on("click", "img", (function() {
       var abilityId = $(this).attr("class");
       var url2 = "https://pokeapi.co/api/v2/ability/" + abilityId;
       $.get(url2, function(res) {
-        if(abilityId > 191 || abilityId == 65 || abilityId == 64) {
-          alert(res.effect_entries[0].short_effect);
+        if(abilityId > 191 || abilityId == 65 || abilityId == 64 || abilityId == 103 || abilityId == 119 || abilityId == 145) {
+          var abilityTitle = ((res.name).toUpperCase());
+          alert("\n" + abilityTitle + "\n\n" + res.effect_entries[0].short_effect);
           console.log(res.effect_entries[0].effect);
           console.log(abilityId);
         } else {
-          alert(res.effect_entries[1].short_effect);
+          var abilityTitle = ((res.name).toUpperCase());
+          alert("\n" + abilityTitle + "\n\n" + res.effect_entries[1].short_effect);
           console.log(res.effect_entries[1].effect);
           console.log(abilityId);
         }
