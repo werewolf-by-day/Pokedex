@@ -1,7 +1,7 @@
 //gets all pokemon images and assigns unique Id
 //updated function to include gen VIII - no abilities listed for newer mons, info completely unavailable for newest - listing up to Zarude
 var html_string="";
-      for(var i = 1; i <= 893; i++) {
+      for(var i = 1; i <= 898; i++) {
         html_string += '<img id="' +  [i]  + '" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + [i] + '.png" alt="">';
       }
 
@@ -11,7 +11,7 @@ $(document).ready(function() {
 //this bit here is to add the additonal forms of certain Pokemon, but ID is arbitrary in API, so it doesn't coincide with dexId - will have to find workaround  
   html_string += '<img id="10126" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/745-midnight.png" alt="">';
   html_string += '<img id="10311" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/745-dusk.png" alt="">';
-  for(var i = 10001; i <= 10190; i++) {
+  for(var i = 10001; i <= 10220; i++) {
         html_string += '<img id="' +  [i]  + '" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + [i] + '.png" alt="">';
       }  
   $("#container").append(html_string);
@@ -77,7 +77,7 @@ $(document).on("click", "img", (function() {
       $(this).css('opacity', '1.0');
     }, function() {
       $(this).css('opacity', '0.1');
-    });
+    }); 
 
 //displays details of clicked ability
     $("li").click(function() {
